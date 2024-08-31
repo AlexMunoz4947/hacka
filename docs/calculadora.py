@@ -1,8 +1,12 @@
-def sumar(a, b):
-    return a + b
+class Calculadora:
+
+    @staticmethod
+    def sumar(a, b):
+        return a + b
 
 # Ejemplo de uso
 if __name__ == "__main__":
+    calculadora = Calculadora()
     while True:
         # Solicitar al usuario que ingrese la operación
         entrada = input("Escriba la operación (por ejemplo, 2 + 2) o 'c' para borrar: ")
@@ -21,7 +25,7 @@ if __name__ == "__main__":
 
             # Realizar la operación de suma si el operador es '+'
             if operacion == '+':
-                resultado = sumar(num1, num2)
+                resultado = calculadora.sumar(num1, num2)
                 print(f"Resultado: {resultado}")
             else:
                 print("Operación no soportada. Por favor, use '+'.")
