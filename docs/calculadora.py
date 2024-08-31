@@ -17,7 +17,7 @@ if __name__ == "__main__":
             continue
 
         try:
-            # Dividir la entrada en los componentes de la operación
+            # Dividir la entrada en los componentes de la operaciónasd
             partes = entrada.split()
             num1 = float(partes[0])
             operacion = partes[1]
