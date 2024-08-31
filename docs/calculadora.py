@@ -4,8 +4,12 @@ class Calculadora:
     def sumar(a, b):
         return a + b
 
+    @staticmethod
+    def restar(a, b):
+        return a - b
+
 # Ejemplo de uso
-if __name__ == "__main__":
+if _name_ == "_main_":
     calculadora = Calculadora()
     while True:
         # Solicitar al usuario que ingrese la operación
@@ -17,17 +21,22 @@ if __name__ == "__main__":
             continue
 
         try:
-            # Dividir la entrada en los componentes de la operaciónasd
+            # Dividir la entrada en los componentes de la operación
             partes = entrada.split()
             num1 = float(partes[0])
             operacion = partes[1]
             num2 = float(partes[2])
 
-            # Realizar la operación de suma si el operador es '+'
+            # Realizar la operación basada en el operador
             if operacion == '+':
                 resultado = calculadora.sumar(num1, num2)
-                print(f"Resultado: {resultado}")
+            elif operacion == '-':
+                resultado = calculadora.restar(num1, num2)
             else:
-                print("Operación no soportada. Por favor, use '+'.")
+                print("Operación no soportada. Por favor, use '+', '-'")
+                continue
+
+            print(f"Resultado: {resultado}")
+
         except Exception as e:
             print(f"Error: {e}. Por favor, ingrese una operación válida.")
