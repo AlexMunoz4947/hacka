@@ -1,4 +1,4 @@
-class Calculadora2:
+class Calculadora:
 
     @staticmethod
     def sumar(a, b):
