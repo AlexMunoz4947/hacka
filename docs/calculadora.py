@@ -8,6 +8,16 @@ class Calculadora:
     def restar(a, b):
         return a - b
 
+    @staticmethod
+    def multiplicar(a, b):
+        return a * b
+
+    @staticmethod
+    def dividir(a, b):
+        if b == 0:
+            raise ValueError("No se puede dividir entre cero")
+        return a / b
+
 # Ejemplo de uso
 if _name_ == "_main_":
     calculadora = Calculadora()
@@ -32,8 +42,12 @@ if _name_ == "_main_":
                 resultado = calculadora.sumar(num1, num2)
             elif operacion == '-':
                 resultado = calculadora.restar(num1, num2)
+            elif operacion == '*':
+                resultado = calculadora.multiplicar(num1, num2)
+            elif operacion == '/':
+                resultado = calculadora.dividir(num1, num2)
             else:
-                print("Operación no soportada. Por favor, use '+', '-'")
+                print("Operación no soportada. Por favor, use '+', '-', '*', '/'")
                 continue
 
             print(f"Resultado: {resultado}")
